@@ -1,0 +1,25 @@
+/*
+h1 {
+  @include font(24px, bold, italic, 1.6, black);
+}
+h2 {
+  @include font(18px, normal);
+}
+*/
+@mixin font($size: false, $weight: false, $style: false, $lh: false, $colour: false) {
+  @if $size {
+    font-size: $size;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $style {
+    font-style: $style;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+  @if $colour {
+    color: $colour;
+  }
+}

@@ -56,3 +56,29 @@ $breakpoints: (
   font-size: 24px;
 }
 ```
+
+### @z
+Reason about z-index order, do not ever write `z-index: 999999999`
+```scss
+/*
+Source:
+@function z($name)
+*/
+
+// Example
+$z-indexes: (
+  'header',
+  'body',
+  'footer'
+);
+
+.header {
+  z-index: z('header'); // 3
+}
+.body {
+  z-index: z('body'); // 2
+}
+.footer {
+  z-index: z('footer'); // 1
+}
+```

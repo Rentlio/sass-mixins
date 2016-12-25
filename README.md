@@ -17,7 +17,7 @@ Source:
 @include font($fontSize-M, $fontWeight-regular, $fontStyle-normal, $fontSpacing-paragraph, $black);
 ```
 ### @push-auto
-Center block level elements
+Horizontally center block level elements
 ```scss
 /*
 Source:

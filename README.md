@@ -7,6 +7,8 @@ Some scss mixins used for Rentl.io homepage and web app.
 
 ### @font
 Font shorthand
+<br>
+[View Source](https://github.com/Rentlio/sass-mixins/blob/master/mixins/_font.scss)
 ```scss
 /*
 Source:
@@ -18,6 +20,8 @@ Source:
 ```
 ### @push-auto
 Horizontally center block level elements
+<br>
+[View Source](https://github.com/Rentlio/sass-mixins/blob/master/mixins/_push-auto.scss)
 ```scss
 /*
 Source:
@@ -30,6 +34,8 @@ Source:
 
 ### @mq
 Media queries shorthand
+<br>
+[View Source](https://github.com/Rentlio/sass-mixins/blob/master/mixins/_mq.scss)
 ```scss
 /*
 Source:
@@ -61,6 +67,8 @@ $breakpoints: (
 
 ### @z
 Reason about z-index order, never again write `z-index: 999999999`
+<br>
+[View Source](https://github.com/Rentlio/sass-mixins/blob/master/mixins/_z.scss)
 ```scss
 /*
 Source:
@@ -86,7 +94,9 @@ $z-indexes: (
 ```
 
 ### @background-image
-Background image helper with retina and svg support
+Background image helper with retina and SVG support
+<br>
+[View Source](https://github.com/Rentlio/sass-mixins/blob/master/mixins/_background-image.scss)
 ```scss
 /*
 Source:
@@ -111,6 +121,8 @@ background-image: url('Pattern.png');
 
 ### @readable-text
 Render typography equally in all browsers
+<br>
+[View Source](https://github.com/Rentlio/sass-mixins/blob/master/mixins/_readable-text.scss)
 ```scss
 /*
 Source:
@@ -123,6 +135,8 @@ Source:
 
 ### @omega-reset
 Specific for Neat grid framework. Reset `@omega` rules
+<br>
+[View Source](https://github.com/Rentlio/sass-mixins/blob/master/mixins/_omega-reset.scss)
 ```scss
 /*
 Source:

@@ -1,6 +1,3 @@
-Rentl.io Sass Mixins
-==============
-
 Some scss mixins used for Rentl.io homepage and web app.
 
 ## SCSS Mixins

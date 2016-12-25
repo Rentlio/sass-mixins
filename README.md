@@ -3,6 +3,8 @@ Rentl.io Sass Mixins
 
 Some scss mixins used for Rentl.io homepage and web app.
 
+## SCSS Mixins
+
 ### @font
 Font shorthand
 ```scss
@@ -130,3 +132,17 @@ Source:
 // Example
 @include omega-reset(3n);
 ```
+
+## Contribution
+
+Ready to submit a fix or a feature? Submit a pull request! And _please_:
+
+- Update documentation comments where applicable.
+- Maintain the existing style.
+
+## Contact
+
+- [Juraj Hilje](https://github.com/jurajhilje), [@juraj_hilje](https://twitter.com/juraj_hilje)
+
+## License
+See [LICENSE](https://github.com/Rentlio/sass-mixins/blob/master/LICENSE).

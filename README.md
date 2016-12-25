@@ -118,3 +118,15 @@ Source:
 // Example
 @include readable-text;
 ```
+
+### @omega-reset
+Specific for Neat grid framework. Reset `@omega` rules
+```scss
+/*
+Source:
+@mixin omega-reset($nth)
+*/
+
+// Example
+@include omega-reset(3n);
+```

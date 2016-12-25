@@ -1,0 +1,9 @@
+/*
+div {
+  @include omega-reset(3n);
+}
+*/
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}

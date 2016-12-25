@@ -1,0 +1,24 @@
+/*
+div {
+  @include background-image('Pattern');
+}
+*/
+$image-path        : '../img' !default;
+$fallback-extension: 'png' !default;
+$retina-suffix     : '@2x' !default;
+@mixin background-image($name, $size: 100% auto, $repeat: no-repeat) {
+  @if $size {
+    background-size: $size;
+  }
+  @if $repeat {
+    background-repeat: $repeat;
+  }
+  
+  background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
+  background-image: url(#{$image-path}/#{$name}.svg);
+  
+  @include hidpi(1.5) {
+    background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension});
+    background-image: url(#{$image-path}/#{$name}.svg);
+  }
+}

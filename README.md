@@ -82,3 +82,27 @@ $z-indexes: (
   z-index: z('footer'); // 1
 }
 ```
+
+### @background-image
+Background image helper with retina and svg support
+```scss
+/*
+Source:
+@mixin background-image($name, $size: 100% auto, $repeat: no-repeat)
+*/
+
+// Example
+@include background-image('Pattern');
+
+/*
+// Output:
+// If there is svg file
+background-image: url('Pattern.svg');
+
+// No svg file but retina screen
+background-image: url('Pattern@2x.png');
+
+// No svg file and non retina screen
+background-image: url('Pattern.png');
+*/
+```

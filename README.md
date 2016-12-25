@@ -60,7 +60,7 @@ $breakpoints: (
 ```
 
 ### @z
-Reason about z-index order, do not ever write `z-index: 999999999`
+Reason about z-index order, never again write `z-index: 999999999`
 ```scss
 /*
 Source:

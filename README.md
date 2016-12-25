@@ -106,3 +106,15 @@ background-image: url('Pattern@2x.png');
 background-image: url('Pattern.png');
 */
 ```
+
+### @readable-text
+Render typography equally in all browsers
+```scss
+/*
+Source:
+@mixin readable-text
+*/
+
+// Example
+@include readable-text;
+```

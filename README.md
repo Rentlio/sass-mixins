@@ -145,4 +145,4 @@ Ready to submit a fix or a feature? Submit a pull request! And _please_:
 - [Juraj Hilje](https://github.com/jurajhilje), [@juraj_hilje](https://twitter.com/juraj_hilje)
 
 ## License
-See [LICENSE](https://github.com/Rentlio/sass-mixins/blob/master/LICENSE).
+See [LICENSE](https://github.com/Rentlio/sass-mixins/blob/master/LICENSE.md).

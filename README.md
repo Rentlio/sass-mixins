@@ -25,3 +25,34 @@ Source:
 // Example
 @include push-auto;
 ```
+
+### @mq
+Media queries shorthand
+```scss
+/*
+Source:
+@mixin mq($size, $type: max, $orientation: width)
+*/
+
+// Example
+$breakpoints: (
+  'phone'       : 400px,
+  'phone-wide'  : 480px,
+  'phablet'     : 560px,
+  'tablet-small': 640px,
+  'tablet'      : 768px,
+  'tablet-wide' : 1024px,
+  'desktop'     : 1248px,
+  'desktop-wide': 1440px
+);
+
+@include mq('phone') {
+  font-size: 16px;
+}
+@include mq('tablet', min) {
+  font-size: 20px;
+}
+@include mq(1000px, max, height) {
+  font-size: 24px;
+}
+```

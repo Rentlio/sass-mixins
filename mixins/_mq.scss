@@ -1,0 +1,31 @@
+/*
+h1 {
+  font-size: 24px;
+  
+  @include mq('phone') {
+    font-size: 16px;
+  }
+  @include mq(800px, min) {
+    font-size: 20px;
+  }
+}
+*/
+$breakpoints: () !default;
+@mixin mq($size, $type: max, $orientation: width) {
+  @if map_has_key($breakpoints, $size) {
+    $size: map_get($breakpoints, $size);
+  }
+  @if $type == max {
+    $size: $size - 1px;
+  }
+  @if $orientation == width {
+    @media only screen and (#{$type}-width: $size) {
+      @content;
+    }
+  }
+  @if $orientation == height {
+    @media only screen and (#{$type}-height: $size) {
+      @content;
+    }
+  }
+}

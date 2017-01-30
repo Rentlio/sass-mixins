@@ -1,10 +1,14 @@
 /*
 .row {
   @include grid-row();
-  
-  .col {
-    @include grid-col();
-  }
+ 
+ .col {
+   @include grid-col();
+ }
+ 
+ .col-4 {
+   @include grid-col(4 / 12);
+ }
 }
 */
 

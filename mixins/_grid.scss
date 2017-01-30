@@ -17,7 +17,7 @@ $grid-gutter : 1em !default;
   > * {
     flex-grow: 1;
     flex-basis: percentage(1 / $grid-columns);
-    margin: auto $gutter / 2;
+    @include margin(null $gutter / 2);
   }
 }
 

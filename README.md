@@ -152,7 +152,7 @@ Grid system
 /*
 Source:
 @mixin grid-row($gutter: $grid-gutter)
-@mixin grid-col
+@mixin grid-col($width: false)
 */
 
 // Example
@@ -160,7 +160,11 @@ Source:
   @include grid-row();
   
   .col {
-    @include grid-col;
+    @include grid-col();
+  }
+  
+  .col-4 {
+    @include grid-col(4 / 12);
   }
 }
 ```

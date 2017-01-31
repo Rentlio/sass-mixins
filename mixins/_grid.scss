@@ -1,0 +1,33 @@
+/*
+.row {
+  @include grid-row();
+ 
+ .col {
+   @include grid-col();
+ }
+ 
+ .col-4 {
+   @include grid-col(4 / 12);
+ }
+}
+*/
+
+$grid-columns: 12 !default;
+$grid-gutter : 1em !default;
+
+@mixin grid-row($gutter: $grid-gutter) {
+  display: flex;
+  
+  > * {
+    flex-grow: 1;
+    flex-basis: percentage(1 / $grid-columns);
+    @include margin(null $gutter / 2);
+  }
+}
+
+@mixin grid-col($width: false) {
+  @if $width {
+    flex-grow: 0;
+    flex-basis: percentage($width);
+  }
+}

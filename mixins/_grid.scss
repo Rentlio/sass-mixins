@@ -23,7 +23,8 @@ $grid-gutter : 1em !default;
     flex-grow: 1;
     flex-basis: percentage(1 / $grid-columns);
     box-sizing: border-box;
-    @include padding(null $gutter / 2);
+    padding-left: $gutter / 2;
+    padding-right: $gutter / 2;
   }
 }
 

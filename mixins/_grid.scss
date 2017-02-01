@@ -17,11 +17,13 @@ $grid-gutter : 1em !default;
 
 @mixin grid-row($gutter: $grid-gutter) {
   display: flex;
+  flex-wrap: wrap;
   
   > * {
     flex-grow: 1;
     flex-basis: percentage(1 / $grid-columns);
-    @include margin(null $gutter / 2);
+    box-sizing: border-box;
+    @include padding(null $gutter / 2);
   }
 }
 

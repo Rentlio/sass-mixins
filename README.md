@@ -144,8 +144,8 @@ Source:
 @include omega-reset(3n);
 ```
 
-### @grid-row, @grid-col
-Grid system
+### @grid-row, @grid-col, @grid-shift
+Minimal grid system
 <br>
 [View Source](https://github.com/Rentlio/sass-mixins/blob/master/mixins/_grid.scss)
 ```scss
@@ -153,18 +153,55 @@ Grid system
 Source:
 @mixin grid-row($gutter: $grid-gutter)
 @mixin grid-col($width: false)
+@mixin grid-shift($width: 0)
 */
 
-// Example
-.row {
+// Simple example
+.grid {
   @include grid-row();
+ 
+  .col-6 {
+    @include grid-col(6 / 12);
+  }
+ 
+  .shift-1 {
+    @include grid-shift(1 / 12);
+  }
+}
+
+// Advanced example (build your own class helpers)
+$grid-columns: 12;
+$grid-gutter : 1em;
+$breakpoint  : 768px;
+
+.grid {
+  @include grid-row($grid-gutter);
   
-  .col {
-    @include grid-col();
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      @include grid-col($i / $grid-columns);
+    }
+    
+    .shift-#{$i} {
+      @include grid-shift($i / $grid-columns);
+    }
   }
   
-  .col-4 {
-    @include grid-col(4 / 12);
+  @media only screen and (max-width: $breakpoint) {
+    > * {
+      @include grid-col(1);
+      @include grid-shift(0);
+    }
+    
+    @for $i from 1 through $grid-columns {
+      .col-#{$i} {
+        @include grid-col(1);
+      }
+      
+      .shift-#{$i} {
+        @include grid-shift(0);
+      }
+    }
   }
 }
 ```

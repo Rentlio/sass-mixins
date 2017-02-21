@@ -1,14 +1,51 @@
 /*
-.row {
+// Simple example
+.grid {
   @include grid-row();
  
- .col {
-   @include grid-col();
- }
+  .col-6 {
+    @include grid-col(6 / 12);
+  }
  
- .col-4 {
-   @include grid-col(4 / 12);
- }
+  .shift-1 {
+    @include grid-shift(1 / 12);
+  }
+}
+
+// Advanced example (build your own system)
+$grid-columns: 12;
+$grid-gutter : 1em;
+$breakpoint  : 768px;
+
+.grid {
+  @include grid-row($grid-gutter);
+  
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      @include grid-col($i / $grid-columns);
+    }
+    
+    .shift-#{$i} {
+      @include grid-shift($i / $grid-columns);
+    }
+  }
+  
+  @media only screen and (max-width: $breakpoint) {
+    > * {
+      @include grid-col(1);
+      @include grid-shift(0);
+    }
+    
+    @for $i from 1 through $grid-columns {
+      .col-#{$i} {
+        @include grid-col(1);
+      }
+      
+      .shift-#{$i} {
+        @include grid-shift(0);
+      }
+    }
+  }
 }
 */
 
@@ -33,4 +70,8 @@ $grid-gutter : 1em !default;
     flex-grow: 0;
     flex-basis: percentage($width);
   }
+}
+
+@mixin grid-shift($width: 0) {
+  margin-left: percentage($width);
 }
